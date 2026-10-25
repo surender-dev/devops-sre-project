@@ -1,0 +1,44 @@
+# Terraform generated files
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Secret and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials
+terraform.tfvars
+**/terraform.tfvars
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Generated build and test output
+dist/
+build/
+coverage/
+
+# Editor and operating system files
+.DS_Store
+.vscode/
+.idea/
