@@ -1,10 +1,15 @@
 
-output "instance_id" {
-  description = "ID of the EC2 instance"
-  value       = aws_instance.web.id
+
+output "instance_public_ips" {
+  value = {
+    for name, instance in aws_instance.server :
+    name => instance.public_ip
+  }
 }
 
-output "instance_public_ip" {
-  description = "Public IPv4 address, if assigned"
-  value       = aws_instance.web.public_ip
+output "elastic_ips" {
+  value = {
+    for name, eip in aws_eip.server :
+    name => eip.public_ip
+  }
 }
